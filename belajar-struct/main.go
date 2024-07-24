@@ -76,7 +76,3 @@ func combineWithSlice() {
 
 	fmt.Println(" ")
 }
-
-func nestedStruct() {
-
-}

@@ -75,18 +75,46 @@ func main() {
 	var bangunLingkaran lingkaran = bangunDatar.(lingkaran)
 
 	f.Println("==== kubus")
-	f.Println("luas		  :", bangunRuang.luas())
-	f.Println("keliling   :", bangunRuang.kelilingDimensi())
-	f.Println("volume 	  :", bangunRuang.volume())
+	f.Println("luas     :", bangunRuang.luas())
+	f.Println("keliling :", bangunRuang.kelilingDimensi())
+	f.Println("volume   :", bangunRuang.volume())
+
+	f.Println(" ")
 
 	bangunDatar = persegi{10.0}
 	f.Println("==== persegi")
-	f.Println("luas 	  :", bangunDatar.luas())
-	f.Println("keliling   :", bangunDatar.keliling())
+	f.Println("luas      :", bangunDatar.luas())
+	f.Println("keliling  :", bangunDatar.keliling())
+
+	f.Println(" ")
 
 	bangunDatar = lingkaran{14.0}
 	f.Println("==== Keliling")
-	f.Println("luas 	  :", bangunDatar.luas())
+	f.Println("luas       :", bangunDatar.luas())
 	f.Println("keliling   :", bangunDatar.keliling())
 	f.Println("jari-jari  :", bangunLingkaran.jariJari())
+
+	f.Println(" ")
+
+	emptyInterface()
+
+}
+
+// empty interface
+func emptyInterface() {
+	var secret interface{}
+
+	secret = "ethan hunt"
+	f.Println("data 1 : ", secret)
+
+	secret = []string{"apple", "manggo", "banana"}
+	f.Println("data 2 : ", secret)
+
+	secret = 12.4
+	f.Println("data 3 : ", secret)
+
+	secret = 2
+	//dicasting jadi kaya gini
+	var number = secret.(int) * 10
+	f.Println(secret, "multiplied by 10 is :", number)
 }

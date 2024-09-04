@@ -15,7 +15,7 @@ func TestHitungVolume(t *testing.T) {
 	t.Logf("Volume : %.2f", kubus.Volume())
 
 	if kubus.Volume() != volumeSeharusnya {
-		// t.Errorf("SALAH! harusnya %.2f", volumeSeharusnya)
+		t.Errorf("SALAH! harusnya %.2f", volumeSeharusnya)
 	}
 }
 
